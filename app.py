@@ -51,7 +51,7 @@ async def convert(update: Update, context: CallbackContext) -> None:
     else:
         await update.message.reply_text("Please select a conversion type first.", reply_markup=markup)
 
-def main():
+def app():
     app = Application.builder().token(BOT_TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
@@ -60,7 +60,7 @@ def main():
     print("Bot is running...")
     app.run_polling()
 
-asyncio.get_event_loop().run_until_complete(main())
+asyncio.get_event_loop().run_until_complete(app())
 
 
 # 🔹 Telethon API Credentials
