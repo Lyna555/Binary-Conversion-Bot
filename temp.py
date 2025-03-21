@@ -16,7 +16,7 @@ reply_keyboard = [
 markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True, resize_keyboard=True)
 
 async def start(update: Update, context: CallbackContext) -> None:
-    await update.message.reply_text("Choose a conversion type:", reply_markup=markup)
+    await update.message.reply_text("Please choose a conversion type:", reply_markup=markup)
 
 async def convert(update: Update, context: CallbackContext) -> None:
     text = update.message.text.strip()
