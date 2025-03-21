@@ -60,7 +60,7 @@ def app():
     print("Bot is running...")
     app.run_polling()
 
-asyncio.get_event_loop().run_until_complete(app())
+app()
 
 
 # 🔹 Telethon API Credentials
